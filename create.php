@@ -2,16 +2,11 @@
 
 include("dbconnection.php"); // include database connection file and open a connection
 
-/* $_POST data
-    savedata - input submit name attribute
-    firstname - input text name attribute
-    lastname - input text name attribute
-    email - input text name attribute
-    address - textarea name attribute */
+
 
 
 if( isset($_POST['savedata']) ) {
-    $firstname = mysqli_real_escape_string($conn, $_POST['filename']);
+    $firstname = mysqli_real_escape_string($conn, $_POST['firstname']);
     $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $address = mysqli_real_escape_string($conn, $_POST['address']);
